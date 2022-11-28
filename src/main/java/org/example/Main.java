@@ -8,6 +8,15 @@ public class Main {
         QuickSort(inputArray, pivot + 1, maxIndex);
         return;
     }
+
+    /**
+     * Метод определения опоного элемента (pivot)
+     * @param inputArray входящий подмассив
+     * @param minIndex индекс первого элемента подмассива
+     * @param maxIndex инлекс последнего элемента подмассива
+     * @return индекс опорного элемента
+     */
+
     static int GetPivotIndex(int[] inputArray, int minIndex, int maxIndex) {
         int pivotIndex = minIndex - 1;
         for (int i = minIndex; i <= maxIndex; i++)
@@ -22,6 +31,13 @@ public class Main {
         Swap(inputArray, pivotIndex, maxIndex);
         return pivotIndex;
     }
+
+    /**
+     * Метод обмена элементов массива значениями
+     * @param inputArray входящий массив (подмассив)
+     * @param leftValue индекс первого элемента
+     * @param rightValue индекс второго элемента
+     */
     static void Swap(int[] inputArray, int leftValue, int rightValue) {
         int temp = inputArray[leftValue];
         inputArray[leftValue] = inputArray[rightValue];
